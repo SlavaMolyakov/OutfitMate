@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}OutfitMate - Главная{% endblock %}
+
+{% include 'messages.html' %}
+
+{% block content %}
+
+<style>
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+<section class="py-5 bg-success text-white text-center hero-section">
+    <div class="container position-relative overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="display-3 fw-bold text-uppercase">OutfitMate</h1>
+                <p class="lead mt-3">
+                    Подбор одежды из вашего гардероба
+                </p>
+                <a href="{% url 'wardrobe_welcome'%}" class="btn btn-light btn-lg mt-4">Попробовать</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <header class="inner text-center mb-4">
+        <h2 class="h2 text-dark">Как это работает</h2>
+    </header>
+
+    <section class="body">
+        <div class="inner-body row g-4">
+            <article class="edit-user-items col-md-4 text-center">
+                <h3 class="h5">1. Добавь свои вещи в гардероб на OutfitMate</h3>
+                <img class="img-fluid rounded mt-3" alt="1. Добавь свои вещи в гардероб на OutfitMate" src="https://cdn.lookastic.com/images/how-it-works/ru/edit-user-items.png" />
+            </article>
+            <article class="recommended-look col-md-4 text-center">
+                <h3 class="h5">2. Получай рекомендации в виде образов, которые ты можешь повторить из своих вещей</h3>
+                <img class="img-fluid rounded mt-3" alt="2. Получай рекомендации в виде модных образов, которые ты можешь повторить из своих вещей" src="https://cdn.lookastic.com/images/how-it-works/ru/recommended-look.png" />
+            </article>
+            <article class="recommended-item col-md-4 text-center">
+                <h3 class="h5">3. Узнай, каких вещей не хватает в твоем гардеробе (и почему)</h3>
+                <img class="img-fluid rounded mt-3" alt="3. Узнай, каких вещей не хватает в твоем гардеробе (и почему)" src="https://cdn.lookastic.com/images/how-it-works/ru/recommended-item.png" />
+            </article>
+        </div>
+    </section>
+</section>
+
+{% endblock %}
